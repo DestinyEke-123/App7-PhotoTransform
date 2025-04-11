@@ -116,6 +116,9 @@
              data[i] = 0; // Set red channel to 0
              data[i + 1] = 0; //Set green channel to 0
              // Blue channel (data[i + 2]) is kept as is to preserve blue colors
+         }
+      // After processing the image data to the second canvas
+         context2.putImageData(processedImageData, 0, 0); // This makes sure the image is inserted with only blue pixels
           
           
         } // end of img.onload
