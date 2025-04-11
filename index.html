@@ -105,7 +105,8 @@
          var canvas2 = document.getElementById('canvas2');
          // Get the 2D drawing context for canvas 2
          var context2 = canvas2.getContext("2d");
-          
+          // Get the image data from the first canvas (original image)
+         const originalImageData = context.getImageData(0, 0, 600, 500);
           
           
         } // end of img.onload
