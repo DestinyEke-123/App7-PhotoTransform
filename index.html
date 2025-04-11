@@ -107,6 +107,8 @@
          var context2 = canvas2.getContext("2d");
           // Get the image data from the first canvas (original image)
          const originalImageData = context.getImageData(0, 0, 600, 500);
+         // Make a copy of the original image data to make sure we don't overwrite the original canvas
+         const processedImageData = new ImageData(new Uint8ClampedArray(originalImageData.data), originalImageData.width, originalImageData.height);
           
           
         } // end of img.onload
